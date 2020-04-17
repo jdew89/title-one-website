@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		title= title
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		//-bulma css
+		//-link(rel='stylesheet', href='/stylesheets/bulma.css')
+		//-font awesome
+		link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+		
+		script(src="/javascripts/styles.js")
+		
+		//-vue
+		//-<!-- development version, includes helpful console warnings -->
+		script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+		//-<!-- production version, optimized for size and speed -->
+		script(src="https://cdn.jsdelivr.net/npm/vue")
+			
+	body.has-navbar-fixed-top
+		include ./navbar.pug
+		//-include ./navbar2.pug
+		block content
+		
+		include ./footer.pug
+		
+		script
+			block scripts

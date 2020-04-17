@@ -1,0 +1,37 @@
+extends templates/layout
+
+block content
+	section.hero.is-medium.hero-image
+		div.hero-body
+			//-div.container(style="padding:3rem;background-color:#00000060;margin-left:-1.5rem;margin-right:-1.5rem")
+			div.container.hero-overlay
+				div.columns
+					div.column.has-text-centered
+						h1.title.has-text-white.hero-overlay-text.is-size-2 What We Offer
+	
+	//-div.container
+		hr
+		h1.has-text-centered.title Services
+		hr
+	section.section
+		div.container
+			div.columns.is-multiline.is-centered
+				mixin service(title,content)
+					div.column.is-one-third
+						div.card
+							//-div.card-image
+								img(src="/images/pic01.jpg")
+							div.card-header.has-background-grey-lighter
+								h1.card-header-title.is-size-3= title
+							div.card-content
+								div.content.is-size-5-mobile= content
+							div.card-footer
+								div.card-footer-item
+									button.button.is-primary Get Quote 
+				+service("Real Estate Closing and Escrow","amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore")
+				+service("Title Insurance","quid noster irure malis multos enim quis magna amet esse quae enim fugiat aliqua labore anim sunt enim elit veniam")
+				+service("Title Examination and Abstracting","labore quae ipsum illum amet quae summis nulla multos quorum velit tempor eram veniam amet nulla ipsum eram minim cillum")
+				+service("Probate/Estate","noster quae malis nisi irure quem velit illum dolor aute aliqua dolore dolor illum legam minim aute dolore multos esse")
+				+service("Deed Preparation","aute quorum quis fore illum anim anim export elit aliqua quae fugiat legam aliqua sunt nulla aliqua nisi multos elit")
+			
+		

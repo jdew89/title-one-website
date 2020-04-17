@@ -1,0 +1,111 @@
+@charset "utf-8"
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700')
+
+// Set your brand colors
+//$purple: #8A4D76
+//$pink: #FA7C91
+//$brown: #757763
+//$beige-light: #D0D1CD
+//$beige-lighter: #EFF0EB
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif
+//$grey-dark: $brown
+//$grey-light: $beige-light
+$primary: #002169
+$info: #97989a
+//$link: $pink
+//$widescreen-enabled: false
+$fullhd-enabled: false
+
+
+// Update some of Bulma's component variables
+//$body-background-color: $beige-lighter
+//$control-border-width: 2px
+//$input-border-color: transparent
+//$input-shadow: none
+
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/sass/utilities/_all.sass"
+@import "../../node_modules/bulma/sass/base/_all.sass"
+@import "../../node_modules/bulma/sass/elements/_all.sass"
+@import "../../node_modules/bulma/sass/form/_all.sass"
+@import "../../node_modules/bulma/sass/components/_all.sass"
+@import "../../node_modules/bulma/sass/layout/_all.sass"
+@import "../../node_modules/bulma/sass/grid/_all.sass"
+
+//import checkbox and radio styles
+//@import "../../node_modules/bulma-checkradio/dist/css/bulma-checkradio.sass"
+
+
+//remove overflow on the x
+body
+	overflow-x: hidden
+
+//makes the checkboxes bigger
+.checkbox
+	width: 5rem
+	height: 5rem
+	background: white
+	border-radius: 5px
+	border: 2px solid #555
+
+//style for the collapsible elem
+//start off with display none
+.collapsible-content
+	max-height: 0px
+	transition: max-height 0.5s ease-out
+	overflow: hidden
+
+
+//add this to the child content directly under the collipsible-content elem
+.collapsible-content-container
+	display: block
+	margin-block-start: 1.25rem
+	margin-block-end: 1.25rem
+	padding-left: 1.5rem
+	padding-right: 1.5rem
+
+//sets hero with this background image
+.hero-image
+	background-image: url('/images/pedro-lastra-Nyvq2juw4_o-unsplash.jpg')
+	background-size: cover
+
+//creates a shadow over the hero image for the text
+.hero-overlay::before
+	content: ''
+	//display: block
+	position: absolute
+	width: 500%
+	top: -50%
+	height: 200%
+	left: -100%
+	background-color: #00000060
+	z-index: 0
+	overflow: hidden
+
+//any element after, set z-index to 10
+.hero-overlay > *
+	z-index: 10
+	position: relative
+
+//creates a hover effect, scales bigger
+.card-hover
+	transition: transform 0.1s linear
+
+//creates a hover effect, scales bigger
+.card-hover:hover
+	transform: scale(1.03)
+
+.title-one-gradient
+	//background-image: url('/images/background.svg')
+	background: rgb(151,152,154)
+	background: linear-gradient(180deg, rgba(151,152,154,0.4) 0%, rgba(151,152,154,1) 100%)
+
+//makes navbar transparent
+nav.is-transparent
+	background-color: #ffffffb0
+
+@import "./centered-nav.sass"
