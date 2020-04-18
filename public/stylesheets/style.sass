@@ -72,19 +72,39 @@ body
 .hero-image
 	background-image: url('/images/pedro-lastra-Nyvq2juw4_o-unsplash.jpg')
 	background-size: cover
+	position: relative
 
-//creates a shadow over the hero image for the text
-.hero-overlay::before
-	content: ''
-	//display: block
-	position: absolute
-	width: 500%
-	top: -50%
-	height: 200%
-	left: -100%
-	background-color: #00000060
-	z-index: 0
-	overflow: hidden
+//creates a gray overlay over the whole img
+@media only screen and (max-width: $tablet)
+	.hero-image::after
+		content: ""
+		display: block
+		position: absolute
+		width: 500%
+		top: 0
+		height: 100%
+		left: -100%
+		background-color: #00000060
+		z-index: 0
+		overflow: hidden
+
+
+@media only screen and (min-width: $tablet)
+	//creates a shadow over the hero image for the text
+	.hero-overlay::before
+		content: ''
+		//display: block
+		position: absolute
+		width: 500%
+		top: -50%
+		height: 200%
+		left: -100%
+		background-color: #00000060
+		z-index: 0
+		overflow: hidden
+
+
+
 
 //any element after, set z-index to 10
 .hero-overlay > *

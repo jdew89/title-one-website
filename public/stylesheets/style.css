@@ -6859,18 +6859,33 @@ body {
 
 .hero-image {
   background-image: url("/images/pedro-lastra-Nyvq2juw4_o-unsplash.jpg");
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
 
-.hero-overlay::before {
-  content: '';
-  position: absolute;
-  width: 500%;
-  top: -50%;
-  height: 200%;
-  left: -100%;
-  background-color: #00000060;
-  z-index: 0;
-  overflow: hidden; }
+@media only screen and (max-width: 769px) {
+  .hero-image::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 500%;
+    top: 0;
+    height: 100%;
+    left: -100%;
+    background-color: #00000060;
+    z-index: 0;
+    overflow: hidden; } }
+
+@media only screen and (min-width: 769px) {
+  .hero-overlay::before {
+    content: '';
+    position: absolute;
+    width: 500%;
+    top: -50%;
+    height: 200%;
+    left: -100%;
+    background-color: #00000060;
+    z-index: 0;
+    overflow: hidden; } }
 
 .hero-overlay > * {
   z-index: 10;
