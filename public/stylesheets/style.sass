@@ -74,7 +74,7 @@ body
 	background-size: cover
 	position: relative
 
-//creates a gray overlay over the whole img
+//creates a gray overlay over the whole img for small devices
 @media only screen and (max-width: $tablet)
 	.hero-image::after
 		content: ""
@@ -84,11 +84,11 @@ body
 		top: 0
 		height: 100%
 		left: -100%
-		background-color: #00000060
+		background-color: #00000080
 		z-index: 0
 		overflow: hidden
 
-
+//create a gray overlay over the text for large screens
 @media only screen and (min-width: $tablet)
 	//creates a shadow over the hero image for the text
 	.hero-overlay::before
@@ -99,12 +99,19 @@ body
 		top: -50%
 		height: 200%
 		left: -100%
-		background-color: #00000060
+		background-color: #00000080
 		z-index: 0
 		overflow: hidden
 
 
 
+//creates cards all the same size
+.card-deck
+	height: 100%
+	display: flex
+	flex-direction: column
+	&.card-footer
+		margin-top: auto
 
 //any element after, set z-index to 10
 .hero-overlay > *
