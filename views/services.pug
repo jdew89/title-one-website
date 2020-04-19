@@ -13,12 +13,15 @@ block content
 		hr
 		h1.has-text-centered.title Services
 		hr
+	//-section.section
+		
+		
 	section.section
 		div.container
 			div.columns.is-multiline.is-centered
 				mixin service(title,content)
 					div.column.is-one-third
-						div.card
+						div.card.card-deck
 							//-div.card-image
 								img(src="/images/pic01.jpg")
 							div.card-header.has-background-grey-lighter
