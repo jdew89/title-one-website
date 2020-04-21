@@ -6911,6 +6911,18 @@ body {
 nav.is-transparent {
   background-color: #ffffffb0; }
 
+.title-ins-img {
+  background-image: url("/images/gabrielle-henderson-HJckKnwCXxQ-unsplash.jpg");
+  background-size: cover;
+  position: relative; }
+
+.dual-section-padding {
+  padding: 5rem 1.5rem; }
+
+@media only screen and (min-width: 769px) {
+  .dual-section-padding {
+    padding: 9rem 3rem; } }
+
 .centered-nav {
   position: fixed;
   padding: 1.5rem;

@@ -1,22 +1,61 @@
 extends templates/layout
 
 block content
-	section.hero.is-medium.hero-image
+	//-section.hero.is-medium.hero-image
 		div.hero-body
 			//-div.container(style="padding:3rem;background-color:#00000060;margin-left:-1.5rem;margin-right:-1.5rem")
 			div.container.hero-overlay
 				div.columns
 					div.column.has-text-centered
 						h1.title.has-text-white.hero-overlay-text.is-size-2 What We Offer
-	
-	//-div.container
-		hr
-		h1.has-text-centered.title Services
-		hr
+	section.hero.is-primary.is-bold.is-medium
+		div.hero-body
+			div.container.has-text-centered
+				h1.title.has-text-white.is-size-2 What We Offer
+	//-pass order for first object then second
+	//- 1,2 is img left,
+	//- 2,1 is img right
+	//-content is an object
+	mixin dual_section(first,second,content)
+		section.hero.is-info.is-bold
+			div.columns.is-marginless
+				//-div.column.is-two-fifths.title-ins-img
+				img.column.is-two-fifths.is-paddingless(style="object-fit:cover;order:"+first src=content.img_url alt=content.img_alt_text width="100%")
+				div.column.is-three-fifths.dual-section-padding(style="order:"+second)
+					h1.title= content.title
+					p= content.text
+	+dual_section(1,2,{
+		title: "Real Estate Closing and Escrow",
+		text: "amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore",
+		img_url: "/images/gabrielle-henderson-HJckKnwCXxQ-unsplash.jpg",
+		img_alt_text: ""
+	})
+	+dual_section(2,1,{
+		title: "Title insurance",
+		text: "amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore",
+		img_url: "/images/helloquence-OQMZwNd3ThU-unsplash.jpg",
+		img_alt_text: ""
+	})
+	+dual_section(1,2,{
+		title: "Title Examination and Abstracting",
+		text: "amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore",
+		img_url: "/images/kelly-sikkema-wDghq14BBa4-unsplash.jpg",
+		img_alt_text: ""
+	})
+	+dual_section(2,1,{
+		title: "Probate/Estate",
+		text: "amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore",
+		img_url: "/images/gabrielle-henderson-HJckKnwCXxQ-unsplash.jpg",
+		img_alt_text: ""
+	})
+	+dual_section(1,2,{
+		title: "Deed Preparation",
+		text: "amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore",
+		img_url: "/images/helloquence-OQMZwNd3ThU-unsplash.jpg",
+		img_alt_text: ""
+	})
+		
 	//-section.section
-		
-		
-	section.section
 		div.container
 			div.columns.is-multiline.is-centered
 				mixin service(title,content)

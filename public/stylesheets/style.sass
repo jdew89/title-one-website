@@ -133,4 +133,25 @@ body
 nav.is-transparent
 	background-color: #ffffffb0
 
+
+//img backgrounds for services page
+.title-ins-img
+	background-image: url('/images/gabrielle-henderson-HJckKnwCXxQ-unsplash.jpg')
+	background-size: cover
+	position: relative
+
+.dual-section-padding
+	padding: 5rem 1.5rem
+
+@media only screen and (min-width: $tablet)
+	//give div height on mobile
+	//.title-ins-img
+		height: 15rem
+	//reduce padding for text on tablets and phones
+	.dual-section-padding
+		padding: 9rem 3rem
+
+
+
+
 @import "./centered-nav.sass"
