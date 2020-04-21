@@ -6916,6 +6916,11 @@ nav.is-transparent {
   background-size: cover;
   position: relative; }
 
+.is-primary-bordered {
+  background-color: #002169;
+  color: white;
+  border: 1px solid white; }
+
 .dual-section-padding {
   padding: 5rem 1.5rem; }
 
