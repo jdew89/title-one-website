@@ -22,8 +22,8 @@ block content
 				//-div.column.is-two-fifths.title-ins-img
 				img.column.is-two-fifths.is-paddingless(style="object-fit:cover;order:"+first src=content.img_url alt=content.img_alt_text width="100%")
 				div.column.is-three-fifths.dual-section-padding(style="order:"+second)
-					h1.title= content.title
-					p= content.text
+					h2.title.is-size-3= content.title
+					p.is-size-5= content.text
 					.columns(style="padding-top:2rem")
 						.column.has-text-centered
 							a.button.is-primary-bordered.has-text-centered.is-large Get a Quote
@@ -58,25 +58,24 @@ block content
 		img_alt_text: ""
 	})
 		
+	//- This is on the front page
 	//-section.section
 		div.container
-			div.columns.is-multiline.is-centered
-				mixin service(title,content)
-					div.column.is-one-third
-						div.card.card-deck
-							//-div.card-image
-								img(src="/images/pic01.jpg")
-							div.card-header.has-background-grey-lighter
-								h1.card-header-title.is-size-3= title
-							div.card-content
-								div.content.is-size-5-mobile= content
-							div.card-footer
-								div.card-footer-item
-									button.button.is-primary Get Quote 
-				+service("Real Estate Closing and Escrow","amet fore sunt anim velit fore legam legam aliqua magna quis noster quae multos eram quae export quis aliqua labore")
-				+service("Title Insurance","quid noster irure malis multos enim quis magna amet esse quae enim fugiat aliqua labore anim sunt enim elit veniam")
-				+service("Title Examination and Abstracting","labore quae ipsum illum amet quae summis nulla multos quorum velit tempor eram veniam amet nulla ipsum eram minim cillum")
-				+service("Probate/Estate","noster quae malis nisi irure quem velit illum dolor aute aliqua dolore dolor illum legam minim aute dolore multos esse")
-				+service("Deed Preparation","aute quorum quis fore illum anim anim export elit aliqua quae fugiat legam aliqua sunt nulla aliqua nisi multos elit")
+			h1.title.is-size-1.has-text-centered Why Choose Us?
+			p.is-size-5.
+				dolor quae summis tamen aute tamen ipsum elit nisi quid aute sunt enim aute 
+				velit quae malis export culpa summis labore eram illum culpa illum malis quae 
+				aliqua quem dolore velit legam quae magna velit tamen illum tamen eram ipsum 
+				quorum quorum cillum quem fugiat nulla elit enim esse minim
+				
+				dolor quae summis tamen aute tamen ipsum elit nisi quid aute sunt enim aute 
+				velit quae malis export culpa summis labore eram illum culpa illum malis quae 
+				aliqua quem dolore velit legam quae magna velit tamen illum tamen eram ipsum 
+				quorum quorum cillum quem fugiat nulla elit enim esse minim
+			p.is-size-5(style="padding-top:1rem").
+				dolor quae summis tamen aute tamen ipsum elit nisi quid aute sunt enim aute 
+				velit quae malis export culpa summis labore eram illum culpa illum malis quae 
+				aliqua quem dolore velit legam quae magna velit tamen illum tamen eram ipsum 
+				quorum quorum cillum quem fugiat nulla elit enim esse minim
 			
 		
